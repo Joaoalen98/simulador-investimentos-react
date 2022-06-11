@@ -1,0 +1,62 @@
+.App {
+  /* header */
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: darkblue;
+    padding: 20px 2%;
+  }
+  
+  .header__titulo {
+      color: white;
+      transition: 0.5s;
+  }
+  
+  .header__titulo:hover {
+      color: hotpink;
+      transition: 0.5s;
+  }
+  
+  .navegacao__lista {
+      display: flex;
+      list-style: none;
+  }
+  
+  .navegacao__lista--link {
+      color: white;
+      text-decoration: none;
+      transition: 0.5s;
+  }
+  
+  .navegacao__lista--link:hover {
+      color: hotpink;
+      transition: 0.5s;
+  }
+  
+  /* main */
+  
+  .simulador {
+      padding: 40px 2%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+  }
+  
+  @media screen and (max-width: 1010px) {
+      .simulador {
+          flex-direction: column;
+          align-items: center;
+      }
+  
+      .simulador__form {
+          margin-bottom: 20px;
+      }
+  
+      .resultados {
+          width: 90%;
+      }
+  }
+}
+
