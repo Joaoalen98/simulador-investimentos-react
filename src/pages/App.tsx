@@ -5,14 +5,16 @@ import FormSimulador from '../components/FormSimulador';
 import Resultados from '../components/Resultados';
 import DadosSimulacao from '../interfaces/DadosForm';
 import ResultadosSimulacao from '../interfaces/ResultadosSimulacao';
+import Header from '../components/Header';
 
 
 function App() {
 
   const [resultadosSimulacao, setResultadosSimulacao] = useState<ResultadosSimulacao>({
+    patrimonioTotal: 0,
+    valorInvestido: 0,
     lucroTotal: 0,
     aportesMensaisTotais: 0,
-    patrimonioTotal: 0,
     valoresPorMes: []
   });
 
@@ -42,26 +44,17 @@ function App() {
         }
 
       setResultadosSimulacao({
+          patrimonioTotal: valoresPorMes[valoresPorMes.length - 1],
+          valorInvestido: dadosForm.aporteInicial + aportesMensaisTotais,
           lucroTotal: valorAtual - (dadosForm.aporteInicial + aportesMensaisTotais),
           aportesMensaisTotais,
           valoresPorMes,
-          patrimonioTotal: valoresPorMes[valoresPorMes.length - 1]
       });
   }
 
   return (
-      <div className="App">
-        <header className="header">
-          <h1 className="header__titulo">Simulador de investimentos</h1>
-          <nav className="navegacao">
-              <ul className="navegacao__lista">
-                  <li className="navegacao__lista--item">
-                      <a href="#" className="navegacao__lista--link">Histórico de simulações</a>
-                  </li>
-              </ul>
-          </nav>
-      </header>
-
+    <div className="App">
+      <Header />
       <main className="simulador">
         <FormSimulador
           calcularRentabilidade={calcularRentabilidade}

@@ -14,6 +14,9 @@ function Resultados ({ resultadosSimulacao } : Props) {
                 Patrimônio Total: <span>R$ {resultadosSimulacao.patrimonioTotal.toFixed(2).replace('.',',')}</span>
             </p>
             <p className="resultados__informacao">
+                Valor Investido: <span>R$ {resultadosSimulacao.valorInvestido.toFixed(2).replace('.',',')}</span>
+            </p>
+            <p className="resultados__informacao">
                 Taxa Total Recebida: <span>R$ {resultadosSimulacao.lucroTotal.toFixed(2).replace('.',',')}</span>
             </p>
             <p className="resultados__informacao">

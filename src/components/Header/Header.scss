@@ -1,0 +1,33 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: darkblue;
+    padding: 20px 2%;
+
+    .header__titulo {
+        color: white;
+        transition: 0.5s;
+    }
+
+    .header__titulo:hover {
+        color: hotpink;
+        transition: 0.5s;
+    }
+    
+    .navegacao__lista {
+        display: none;
+        list-style: none;
+    }
+    
+    .navegacao__lista--link {
+        color: white;
+        text-decoration: none;
+        transition: 0.5s;
+    }
+    
+    .navegacao__lista--link:hover {
+        color: hotpink;
+        transition: 0.5s;
+    }
+}

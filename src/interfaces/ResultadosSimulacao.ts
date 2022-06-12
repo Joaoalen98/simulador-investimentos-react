@@ -1,7 +1,8 @@
 interface ResultadosSimulacao {
+    patrimonioTotal: number,
+    valorInvestido: number,
     lucroTotal: number,
     aportesMensaisTotais: number,
-    patrimonioTotal: number,
     valoresPorMes: number[]
 }
 

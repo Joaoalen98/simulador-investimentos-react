@@ -19,11 +19,15 @@
         }
         
         &:nth-of-type(2) {
-            background-color: rgb(195, 81, 138);
+            background-color: rgb(198, 80, 139);
+        }
+
+        &:nth-of-type(3) {
+            background-color: rgb(186, 74, 130);
         }
         
         &:last-of-type {
-            background-color: rgb(177, 72, 124);
+            background-color: rgb(168, 66, 117);
             border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
         }
