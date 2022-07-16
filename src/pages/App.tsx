@@ -6,15 +6,16 @@ import Resultados from '../components/Resultados';
 import DadosSimulacao from '../interfaces/DadosForm';
 import ResultadosSimulacao from '../interfaces/ResultadosSimulacao';
 import Header from '../components/Header';
+import GraficoResultados from '../components/GraficoResultados';
 
 
 function App() {
 
   const [resultadosSimulacao, setResultadosSimulacao] = useState<ResultadosSimulacao>({
-    patrimonioTotal: 0,
-    valorInvestido: 0,
-    lucroTotal: 0,
-    aportesMensaisTotais: 0,
+    patrimonioTotal: Number(),
+    valorInvestido: Number(),
+    lucroTotal: Number(),
+    aportesMensaisTotais: Number(),
     valoresPorMes: []
   });
 
@@ -60,9 +61,12 @@ function App() {
           calcularRentabilidade={calcularRentabilidade}
         />
         <Resultados
-          resultadosSimulacao={resultadosSimulacao}
+          {...resultadosSimulacao}
         />
       </main>
+        <GraficoResultados
+          valoresPorMes={resultadosSimulacao.valoresPorMes}
+        />
     </div>
   );
 }

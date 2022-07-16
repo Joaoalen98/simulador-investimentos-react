@@ -71,7 +71,7 @@ function FormSimulador ({ calcularRentabilidade } : Props) {
                         ...dadosForm,
                         anos: Number(e.currentTarget.value)
                     })}
-                    type="number" 
+                    type="text" 
                     name="anos" 
                     id="anos" 
                     pattern='([1-9])(\d+)'
