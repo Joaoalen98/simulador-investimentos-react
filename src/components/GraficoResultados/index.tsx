@@ -1,5 +1,24 @@
-import BarraGrafico from './BarraGrafico';
 import './GraficoResultados.scss';
+
+import {
+    Chart as ChartJS,
+    CategoryScale,
+    LinearScale,
+    BarElement,
+    Title,
+    Tooltip,
+    Legend,
+} from 'chart.js';
+import { Bar } from 'react-chartjs-2';
+
+ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    BarElement,
+    Title,
+    Tooltip,
+    Legend
+);
 
 
 interface Props {
@@ -8,46 +27,30 @@ interface Props {
 
 function GraficoResultados({ valoresPorMes }: Props) {
 
-    const altura = 200
-    const divisor = maiorValor(valoresPorMes) / altura
-
-    function maiorValor (valoresPorMes: number[]){
-        let maiorValor = 0;
-
-        valoresPorMes.forEach(valor => {
-            if(maiorValor < valor) {
-                maiorValor = valor
-            }
-        })
-
-        return maiorValor
-    }
-
-    return (  
-        <div 
-            className="grafico__resultados"
-            style={{
-                display: valoresPorMes.length > 0 ?
-                    'flex' : 'none'
-            }}    
-        >
-            <h2>Grafico:</h2>
-            <div className="grafico__resultados__container">
-                {
-                    valoresPorMes.map((valor, index) => {
-                        return (
-                            <BarraGrafico
-                                key={index}
-                                divisor={divisor}
-                                valor={valor}
-                                valoresPorMes={valoresPorMes}
-                            />
-                        );
-                    })
-                }
-            </div>
+    return (
+        <div className='grafico__resultados'>
+            <Bar
+                style={{
+                    display: valoresPorMes.length === 0 ?
+                        'none' : 'block'
+                }}
+                options={{
+                    responsive: true,
+                }}
+                data={{
+                    labels: valoresPorMes,
+                    datasets: [
+                        {
+                            label: 'Patrimônio Total',
+                            data: valoresPorMes,
+                            borderColor: 'darkblue',
+                            backgroundColor: 'hotpink',
+                        }
+                    ]
+                }}
+            />
         </div>
-    );
+    )
 }
 
 export default GraficoResultados;
