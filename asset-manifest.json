@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/simulador-investimentos-react/static/css/main.4b67d6cb.css",
-    "main.js": "/simulador-investimentos-react/static/js/main.855e16cb.js",
+    "main.css": "/simulador-investimentos-react/static/css/main.ccaf246a.css",
+    "main.js": "/simulador-investimentos-react/static/js/main.93af1ee2.js",
     "static/js/787.0fcbad90.chunk.js": "/simulador-investimentos-react/static/js/787.0fcbad90.chunk.js",
     "index.html": "/simulador-investimentos-react/index.html",
-    "main.4b67d6cb.css.map": "/simulador-investimentos-react/static/css/main.4b67d6cb.css.map",
-    "main.855e16cb.js.map": "/simulador-investimentos-react/static/js/main.855e16cb.js.map",
+    "main.ccaf246a.css.map": "/simulador-investimentos-react/static/css/main.ccaf246a.css.map",
+    "main.93af1ee2.js.map": "/simulador-investimentos-react/static/js/main.93af1ee2.js.map",
     "787.0fcbad90.chunk.js.map": "/simulador-investimentos-react/static/js/787.0fcbad90.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4b67d6cb.css",
-    "static/js/main.855e16cb.js"
+    "static/css/main.ccaf246a.css",
+    "static/js/main.93af1ee2.js"
   ]
 }
