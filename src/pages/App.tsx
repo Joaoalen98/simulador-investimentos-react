@@ -38,7 +38,7 @@ function App() {
       let cont = 0
       while (cont < totalMeses) {
           valorAtual += dadosForm.aportesMensais + (valorAtual * taxaMes);
-          valoresPorMes.push(valorAtual)
+          valoresPorMes.push(Number(valorAtual.toFixed(2)))
           
           aportesMensaisTotais += dadosForm.aportesMensais;
           cont ++
