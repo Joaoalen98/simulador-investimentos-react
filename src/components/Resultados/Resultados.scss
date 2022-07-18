@@ -3,14 +3,13 @@
     flex-direction: column;
     justify-content: space-between;
     width: 48%;
-    min-width: 500px;
-    padding-top: 40px;
+    min-width: 300px;
     border-radius: 15px;
     background-color: hotpink;
     overflow: hidden;
 
     .resultados__titulo {
-        padding: 0 40px;
+        padding: 20px;
     }
     
     .resultados__informacao {
@@ -32,7 +31,7 @@
             justify-content: space-between;
             align-items: center;
             height: 70px;
-            padding: 0 2%;
+            padding: 0 20px;
 
             &:first-of-type {
                 background-color: rgb(216, 88, 152);
