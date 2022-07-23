@@ -27,6 +27,16 @@ interface Props {
 
 function GraficoResultados({ valoresPorMes }: Props) {
 
+    function legendaBarras (valoresPorMes: number[]) {
+        let legendas: string[] = [];
+
+        for (let i = 1; i <= valoresPorMes.length; i++) {
+            legendas.push(`${i}° Mês`)
+        }
+
+        return legendas
+    }
+
     return (
         <div className='grafico__resultados'>
             <Bar
@@ -38,7 +48,7 @@ function GraficoResultados({ valoresPorMes }: Props) {
                     responsive: true,
                 }}
                 data={{
-                    labels: valoresPorMes,
+                    labels: legendaBarras(valoresPorMes),
                     datasets: [
                         {
                             label: 'Patrimônio Total',
